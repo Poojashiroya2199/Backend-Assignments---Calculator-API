@@ -23,7 +23,7 @@ app.post("/add", (req, res) => {
     }
     const num1 = req.body.num1;
     const num2 = req.body.num2;
-    if (num1 > 1000000 || num2 > 1000000 || num1 + num2 > 1000000) {
+    if (num1 > 1000000 || num2 > 1000000 ||num1<0 || num2<0|| num1 + num2 > 1000000) {
       res.send({
         status: "error",
         message: "Overflow",
@@ -53,7 +53,7 @@ app.post("/add", (req, res) => {
     }
     const num1 = req.body.num1;
     const num2 = req.body.num2;
-    if (num1 > 1000000 || num2 > 1000000 || num1 - num2 <0 || num1-num2>1000000) {
+    if (num1 > 1000000 || num2 > 1000000 || num1<0||num2<0||num1 - num2 <0 || num1-num2>1000000) {
       res.send({
         status: "error",
         message: "Overflow",
@@ -83,7 +83,7 @@ app.post("/add", (req, res) => {
     }
     const num1 = req.body.num1;
     const num2 = req.body.num2;
-    if (num1 > 1000000 || num2 > 1000000 || num1*num2 <0 || num1*num2>1000000) {
+    if (num1 > 1000000 || num2 > 1000000 || num1<0||num2<0||num1*num2 <0 || num1*num2>1000000) {
       res.send({
         status: "error",
         message: "Overflow",
@@ -113,7 +113,7 @@ app.post("/add", (req, res) => {
     }
     const num1 = req.body.num1;
     const num2 = req.body.num2;
-    if (num1 > 1000000 || num2 > 1000000 || num2===0||  num1/num2>1000000) {
+    if (num1 > 1000000 || num2 > 1000000 || num2==0||  num1/num2>1000000) {
       res.send({
         status: "error",
         message: "Overflow",
